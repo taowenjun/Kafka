@@ -40,7 +40,7 @@ public class TopicManager {
 		try{
 			zkUtils=ZkUtils.apply(ZK_CONNECT, SESSION_TIMEOUT, CONNECT_TIMEOUT, JaasUtils.isZkSecurityEnabled());
 			if(!AdminUtils.topicExists(zkUtils, topic)){
-				AdminUtils.createTopic(zkUtils, topic, partition, partition, properties, AdminUtils.createTopic$default$6());
+				AdminUtils.createTopic(zkUtils, topic, partition, replica, properties, AdminUtils.createTopic$default$6());
 			}else{
 				System.out.println("Topic already exists");
 			}	
