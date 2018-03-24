@@ -1,8 +1,9 @@
-#log4j与Kafka整合
-#创建主题
+#log4j涓嶬afka鏁村悎
+
+#鍒涘缓涓婚
 [root@master kafka]# bin/kafka-topics.sh --create --zookeeper 10.108.21.2:2181,10.108.21.236:2181 --topic kafka-log4j --partitions 1 --replication-factor 1
 
-#运行日志输出程序后，查看Kafka中采集的日志信息
+#杩愯鏃ュ織杈撳嚭绋嬪簭鍚庯紝鏌ョ湅Kafka涓噰闆嗙殑鏃ュ織淇℃伅
 [root@master kafka]# bin/kafka-run-class.sh kafka.tools.DumpLogSegments --files /tmp/kafka-logs/kafka-log4j-0/00000000000000000000.log --print-data-log
 Dumping /tmp/kafka-logs/kafka-log4j-0/00000000000000000000.log
 Starting offset: 0
