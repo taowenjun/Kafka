@@ -22,7 +22,7 @@ public class KafkaConsumerForPartitionThread extends Thread{
 		Properties props = new Properties();
 		props.putAll(consumerConfig);
 		this.consumer = new KafkaConsumer<String,String>(props);
-		consumer.assign(Arrays.asList(new TopicPartition("stock-quotation", 1)));
+		consumer.assign(Arrays.asList(new TopicPartition(topic, 0)));
 	}
 	
 	@Override

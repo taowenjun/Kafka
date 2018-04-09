@@ -46,7 +46,7 @@ public class KafkaConsumerThread extends Thread{
 	public void run(){
 		try{
 			while(true){
-				ConsumerRecords<String, String> records = consumer.poll(1000);
+				ConsumerRecords<String, String> records = consumer.poll(1);
 				for(ConsumerRecord<String, String> record:records){
 					System.out.printf("threadId=%s,partition=%d,offset=%d,key=%s value=%s\n",
 							Thread.currentThread().getId(),record.partition(),record.offset(),record.key(),record.value());
