@@ -7,3 +7,5 @@ flume-kafka:Flume与Kafka连接的Flume配置文件
 kafka-flume-hdfs:Kafka与Flume、HDFS连接
 
 log4j-kafka:log4j与kafka连接
+
+Wiki记录了源码阅读笔记
